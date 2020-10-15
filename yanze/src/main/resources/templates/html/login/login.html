@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{layout/main}">
+<head>
+<meta charset="UTF-8">
+<title>登录页面</title>
+<link rel="stylesheet" type="text/css" href="/css/login/login.css" />
+</head>
+<body data-layout-fragment="content">
+	<h2>欢迎登录</h2>
+	<form id="form_login" action="/index">
+		<label>请输入用户名：</label> 
+		<input type="text" name="username" /> 
+		<span class="spn-username">用户名不存在</span> <br>
+		<label>请输入密码：</label> 
+		<input type="password" name="password" /> 
+		<span class="spn-password">密码错误</span><br>
+		<input type="button" id="btnCommit" value="提交" />
+		<input type="reset" value="重置" />
+	</form>
+</body>
+<script>
+	document.write("<script type='text/javascript' src='/js/login/login.js?v="
+			+ Math.random() + "'></scri"+"pt>");
+</script>
+</html>

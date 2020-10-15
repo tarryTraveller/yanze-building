@@ -1,0 +1,42 @@
+body {
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	background-color: #f0f0f0; */
+	/* 	font-size: 20px; */
+	/* 	font-family: "宋体";  */
+}
+
+/* * { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* } */
+
+input:-webkit-autofill, select:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+	border: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: #BBBBBB;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #BBBBBB;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #BBBBBB;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #BBBBBB;
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}

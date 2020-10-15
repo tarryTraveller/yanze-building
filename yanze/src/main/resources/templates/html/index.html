@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro"
+	xmlns:th="http://www.thymeleaf.org" 
+	data-layout-decorate="~{layout/main}">
+<head>
+<meta charset="UTF-8">
+<title>博客官网首页</title>
+</head>
+<body data-layout-fragment="content">
+	欢迎<span th:text="${username}"></span>进来！
+	<p>
+		<input type="button" id="btnLogout" value="退出" />
+	</p>
+	<p >
+		<input type="button" id="btnShowMap" value="普通管理人员点击显示地图" />
+	</p>
+	<p shiro:hasPermission="超级管理员权限">
+		<input type="button" id="" value="超级管理员权限才看的到" />
+	</p>
+	<p shiro:hasPermission="普通管理人员权限">
+		<input type="button" id="" value="普通管理人员权限才看的到" />
+	</p>
+	<p shiro:hasPermission="普通用户权限">
+		<input type="button" id="" value="普通用户权限才看的到" />
+	</p>
+	<p shiro:hasPermission="会员用户权限">
+		<input type="button" id="" value="会员用户权限才看的到" />
+	</p>
+	<shiro:hasRole name="超级管理员">
+		<p>
+		有admin角色的登录人员才看的到！
+		</p>
+	</shiro:hasRole>
+
+	<script>
+		document.write("<script type='text/javascript' src='/js/index.js?v="
+						+ Math.random() + "'></scri"+"pt>");
+	</script>
+</body>
+</html>

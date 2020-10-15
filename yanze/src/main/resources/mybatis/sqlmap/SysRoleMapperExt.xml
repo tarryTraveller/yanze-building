@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yanze.building.dao.mapper.SysRoleMapperExt">
+	<select id="getRoleByUserId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from sys_role t2 where t2.id in(
+		select t1.role_id from sys_user_role t1 where 0=0  
+        <if test="_parameter!=null ">
+          and t1.user_id=#{_parameter}
+        </if>
+        )
+    </select>
+</mapper>

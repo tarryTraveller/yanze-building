@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	data-layout-decorate="~{layout/main}">
+	<head>
+		<meta charset="UTF-8">
+		<title>彦泽桩基工程管理系统</title>
+		<link rel="stylesheet" href="/css/register/register-main.css?v=1" />
+	</head>
+	<body data-layout-fragment="content">
+		
+		<div class="top-register"  >
+			<label class="top-title">
+				<a href="#">
+					<img alt="星云" src="/img/logo.png" class="img-logo">
+					<span class="span-logo">彦泽桩基</span>
+				</a>&nbsp;
+				<span  class="span-logo-title">账号注册</span>
+			</label>
+		</div>
+		<div class="main-register" >
+			<form id="form_register" >
+				<div class="same-register">
+					<label class="head-title">欢迎注册</label>
+					<span class="span-login">已有账号？<a href="/login" class="a-login">立即登录</a></span>
+				</div>
+				<div class="same-register" >
+					<div class="mid-input-same" id="username_div" >
+						<input class="field-same" maxlength="15" id="username" name="username" type="text" placeholder="设置用户名" />
+						<span class="mid-span-same"><i class="iconfont icon-quxiao"></i></span>
+					</div>
+					<div class="warn-tip-div" >
+						<span class="warn-tip-span">
+							<i class="iconfont icon-quxiao-circle"></i>
+							请设置用户名
+						</span>
+						<span class="warn-tip-span-after">
+							<i class="iconfont icon-quxiao-circle"></i>
+							用户名输入不符合要求
+						</span>
+						<span class="warn-tip-span-last">
+							<i class="iconfont icon-quxiao-circle"></i>
+							用户名已经存在
+						</span>
+					</div>
+				</div>
+				<div class="same-register">
+					<div class="mid-input-same" id="password_div" >
+						<input class="field-same" maxlength="16" name="password" id="password" type="password" placeholder="设置你的登录密码" />
+						<span class="mid-span-same">
+							<i class="iconfont icon-quxiao"></i>
+						</span>
+						<span class="mid-span-same2">
+							<i class="iconfont icon-eye"></i>
+						</span>
+					</div>
+					<div class="warn-tip-div" >
+						<span class="warn-tip-span">
+							<i class="iconfont icon-quxiao-circle"></i>
+							请设置登录密码
+						</span>
+						<span class="warn-tip-span-after">
+							<i class="iconfont icon-quxiao-circle"></i>
+							密码设置不符合要求
+						</span>
+					</div>
+				</div>
+				<div class="same-register">
+					<div class="mid-input-same" id="repassword_div">
+						<input class="field-same" maxlength="16" id="repassword" type="password" placeholder="请再次输入你的密码" />
+						<span class="mid-span-same">
+							<i class="iconfont icon-quxiao"></i>
+						</span>
+						<span class="mid-span-same2">
+							<i class="iconfont icon-eye"></i>
+						</span>
+					</div>
+					<div class="warn-tip-div" >
+						<span class="warn-tip-span">
+							<i class="iconfont icon-quxiao-circle"></i>
+							请再次输入你的密码
+						</span>
+						<span class="warn-tip-span-after">
+							<i class="iconfont icon-quxiao-circle"></i>
+							两次输入的密码不一致，请重新输入
+						</span>
+					</div>
+				</div>
+				<div class="same-register">
+				<div class="drag-register">
+					<div class="bg-register"></div>
+					<div class="text-register" onselectstart="return false;">请按住滑块，拖到最右边</div>
+					<div class="btn-register">&gt;&gt;</div>
+				</div>
+					<div class="warn-tip-div2" >
+						<span class="warn-tip-span">
+							<i class="iconfont icon-quxiao-circle"></i>
+							请拖动滑块验证码
+						</span>
+					</div>
+				</div>
+				<div class="drag-register">
+					<button class="same-register2">
+						同意条款并注册
+					</button>
+				</div>
+				<div class="same-register" >
+					<input type="checkbox" id="checkbox-register"  value="checkbox" checked="checked" /> 
+					<label for="checkbox-register" id="checkbox-label"></label>
+					<a href="/register/item" target="_blank" class="a-xieyi">《法律声明及隐私权政策》</a>
+					<div class="warn-tip-div2" style="line-height: 50px;" >
+						<span class="warn-tip-span">
+							<i class="iconfont icon-quxiao-circle"></i>
+							请勾选同意协议
+						</span>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script>
+			document.write("<script type='text/javascript' src='/js/register/register-main.js?v="+Math.random()+"'></scri"+"pt>");
+		</script>
+	</body>
+</html>

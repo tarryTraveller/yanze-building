@@ -1,0 +1,13 @@
+.spn-username{
+	color: red;
+	display: none;
+}
+.spn-password{
+	color: red;
+	display: none;
+}
+body{
+	background: white;
+	padding: 10px;
+	margin: 10px;
+}

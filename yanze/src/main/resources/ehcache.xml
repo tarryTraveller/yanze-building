@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache name="zjcds_cas_cache" updateCheck="false">
+	<cacheManagerPeerProviderFactory class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+		properties="peerDiscovery=automatic, multicastGroupAddress=230.0.0.1, multicastGroupPort=4446" />
+	<cacheManagerPeerListenerFactory class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory" />
+
+	<!-- 默认缓存设置-->	
+	<defaultCache
+		maxElementsInMemory="1000"
+		eternal="false"
+		timeToIdleSeconds="900"
+		timeToLiveSeconds="900"
+		overflowToDisk="true"
+		maxElementsOnDisk="1000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU" />
+	
+	<!--持久化本地存储位置-->
+	<diskStore path="D:/ehcache/" />
+	
+	<!-- 一般缓存设置-->	
+	<cache name="NormalCache"
+         maxElementsInMemory="1000"
+         eternal="false"
+         timeToIdleSeconds="600"
+         timeToLiveSeconds="600"
+         overflowToDisk="false"
+         memoryStoreEvictionPolicy="LRU"/>
+</ehcache>

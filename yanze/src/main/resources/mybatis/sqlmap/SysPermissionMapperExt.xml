@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yanze.building.dao.mapper.SysPermissionMapperExt" >
+	<select id="getPermsByRoleId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from sys_permission t2 where t2.id in(
+		select t1.permission_id from sys_role_permission t1 where 0=0  
+        <if test="_parameter!=null ">
+          and t1.role_id=#{_parameter}
+        </if>
+        )
+    </select>
+</mapper>
